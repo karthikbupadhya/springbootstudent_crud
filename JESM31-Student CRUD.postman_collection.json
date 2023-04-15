@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "b7c9ce02-90ab-4913-a960-381aa9e68e47",
+		"name": "JESM31-Student CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\":\"Karthik bhat\",\r\n\"mobile\":8105725310,\r\n\"standard\":10,\r\n\"science\":65,\r\n\"mathematics\":55,\r\n\"social\":59,\r\n\"english\":56,\r\n\"kannada\":87,\r\n\"hindi\":67\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Multiple",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Karthik\",\r\n        \"mobile\": 8105725312,\r\n        \"standard\": 10,\r\n        \"science\": 69,\r\n        \"mathematics\": 55,\r\n        \"social\": 59,\r\n        \"english\": 56,\r\n        \"kannada\": 87,\r\n        \"hindi\": 67\r\n    },\r\n    {\r\n        \"name\": \"Nandeesh\",\r\n        \"mobile\": 8105725311,\r\n        \"standard\": 10,\r\n        \"science\": 65,\r\n        \"mathematics\": 55,\r\n        \"social\": 59,\r\n        \"english\": 56,\r\n        \"kannada\": 87,\r\n        \"hindi\": 67\r\n    },\r\n    {\r\n        \"name\": \"Sandeep\",\r\n        \"mobile\": 8105725398,\r\n        \"standard\": 10,\r\n        \"science\": 90,\r\n        \"mathematics\": 55,\r\n        \"social\": 59,\r\n        \"english\": 50,\r\n        \"kannada\": 87,\r\n        \"hindi\": 67\r\n    },\r\n    {\r\n        \"name\": \"Darshan\",\r\n        \"mobile\": 8105726898,\r\n        \"standard\": 10,\r\n        \"science\": 50,\r\n        \"mathematics\": 55,\r\n        \"social\": 59,\r\n        \"english\": 40,\r\n        \"kannada\": 77,\r\n        \"hindi\": 67\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchById1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8080/student?id=9",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchByid2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/students",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/studentname/Karthik bhat",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"studentname",
+						"Karthik bhat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchByMobile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/studentmobile/8105725310",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"studentmobile",
+						"8105725310"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchByStandard",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/studentstandard/10",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"studentstandard",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchResult",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/firstclass",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"firstclass"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchSubject>marks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/science/60",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"science",
+						"60"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteStudent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/student/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\":4,\r\n\"name\":\"Karthik\",\r\n\"mobile\":8105725310,\r\n\"standard\":10,\r\n\"science\":65,\r\n\"mathematics\":55,\r\n\"social\":59,\r\n\"english\":56,\r\n\"kannada\":87,\r\n\"hindi\":67\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/student",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
